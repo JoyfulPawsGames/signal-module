@@ -1,0 +1,9 @@
+# Project place file
+/signal-module.rbxlx
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Rojo
+sourcemap.json

@@ -1,0 +1,10 @@
+{
+  "name": "signal-module",
+  "tree": {
+    "$className": "DataModel",
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "$path": "src/"
+    }
+  }
+}

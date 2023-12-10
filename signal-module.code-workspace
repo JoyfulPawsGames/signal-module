@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "extensions": {
+        "recommendations": [
+            "JohnnyMorganz.luau-lsp",
+            "evaera.vscode-rojo",
+            "JohnnyMorganz.stylua",
+            "Gruntfuggly.todo-tree"
+        ]
+    },
+    "settings": {
+        "todo-tree.regex.regex": "--\\[\\[[\\s|\\n|\\r]*($TAGS)[\\s|\\n|\\r]*\\]\\]|--\\s*($TAGS)"
+    },
+}

@@ -1,33 +1,28 @@
-type ConnectionProperties = {
-    Connected: boolean,
-}
+--[[
+    Implementation of Connection.
+]]
 
-type ConnectionMethods = {
-    Disconnect: (self: Connection) -> nil,
-}
+----- Types -----
+local types = script.Parent.Types
+local Connection = require(types.Connection)
 
-type ConnectionMetatable = {
-    __index: ConnectionMethods,
-}
-
-export type Connection = typeof(setmetatable({} :: ConnectionProperties, {} :: ConnectionMetatable))
-
-local ConnectionProperties: ConnectionProperties = {
+----- Module Tables -----
+local ConnectionProperties: Connection.ConnectionProperties = {
     Connected = true,
 }
 
-local ConnectionMethods: ConnectionMethods = {
-    Disconnect = function(self: Connection)
+local ConnectionMethods: Connection.ConnectionMethods = {
+    Disconnect = function(self)
         self.Connected = false
     end,
 }
 
-local ConnectionMetatable: ConnectionMetatable = {
+local ConnectionMetatable: Connection.ConnectionMetatable = {
     __index = ConnectionMethods,
 }
 
 return {
-    new = function(): Connection
+    new = function()
         local connection = table.clone(ConnectionProperties)
         setmetatable(connection, ConnectionMetatable)
         return connection
